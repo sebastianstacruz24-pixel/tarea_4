@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CATALOGO DE BICICLETAS DE MONTAÑA</title>
+
+	<style>
+		
+		body {
+			font-family: Arial;
+			background-color:#f2f2f2;
+			margin: 0;
+		}
+        
+        /* encabezado  */
+		header {
+			background-image: url("C:/Users/PC/Pictures/bicicletas de montaña/bicicleta.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+			color: white;
+			text-align: center;
+			padding: 40px 20px;
+            min-height: 150px;
+		}
+
+        /* navegacion */
+		nav {
+			background-color: white;
+			text-align: center;
+			padding: 15px;
+		}
+        /* navegacion con la etiqueta "a" para enlaces */
+		nav a {
+			margin: 15px;
+			text-decoration: none;
+			color: #073b63;
+			font-weight: bold;
+		}
+
+        /* partes ya asignadas al usar class */ 
+		.catalogo {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 20px;
+			padding: 20px;
+		}
+        
+        /* ventana con zoom */
+		.producto {
+			background-color: white;
+			padding: 15px;
+			text-align: center;
+			border: 1px solid #ccc;
+            border-radius: 15px;
+			transition: transform 0.3s;
+            overflow: hidden;
+		}
+
+		.producto:hover {
+			transform: scale(1.1);
+		}
+
+		.producto img {
+			width: 100%;
+			height: 150px;
+			object-fit: contrain;
+            border-radius: 20px;
+            display: block;
+            margin: 0 auto 15px;
+		}
+
+        .producto {
+            position: relative;
+        }
+         
+        /* DESCUENTOS */
+        .descuento {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background-color: #e63946;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            z-index: 2;
+        }
+
+
+		.precio {
+			color: #0788d1;
+			font-size: 20px;
+			font-weight: bold; 
+		}
+
+		.boton {
+			display: block;
+			background-color: #079447;
+			color: white;
+			padding: 10px;
+			text-decoration: none;
+			margin-top: 10px;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.15s ease;
+		}
+
+        /* Efecto al hacer clic */
+        .boton:active {
+            transform: scale(0.90);
+            background-color: #056b34;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        } 
+         
+
+
+        /* pie de pagina */ 
+		footer {
+            background-image: url("C:/Users/PC/Pictures/bicicletas de montaña/bicicleta.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+			color: white;
+			text-align: center;
+			padding: 40px 20px ;
+            min-height: 150px;
+		}		
+
+	</style>
+</head>
+<!-------------------------------------------------------------------------------------------------------------------->
+<body>
+
+<header>
+	<h1>🚵 BICICLETA DE MONTAÑA </h1>
+	<p>Libertad en cada ruta</p>
+</header>
+
+<nav>
+	<a href="#"> Inicio </a> &nbsp;
+	<a href="#"> Bicicletas </a> &nbsp;
+	<a href="#"> Accesorios </a> &nbsp;
+	<a href="#"> Contacto </a> &nbsp;
+    <a href="Comprar.html"> Comprar </a> &nbsp;
+</nav>
+
+<!---titulo secundario--->
+<h2 style="text-align: center;"> Bicicletas de Montaña <br> (Semana de descuentos)</h2>
+
+<div class="catalogo">
+
+    <!--- BICI 1 ---->
+	<div class="producto">
+
+        <div class="descuento">-20%</div>
+
+		<img src="C:\Users\PC\Pictures\bicicletas de montaña\bici1.jpg">
+
+		<h3> sunpeed Ace Pro </h3>
+		<p> Aro: 29 | 27 veloidades </p>
+		<p class="precio">S/ 3,240.00 </p>
+		<a href="file:///C:\Users\PC\Pictures\bicicletas de montaña/bici 1.html" class="boton" href="#"> Comprar </a>
+	</div>
+
+
+
+    <!---- BICI 2 ----->
+	<div class="producto">
+        <div class="descuento">-27%</div>
+
+        <img src="C:\Users\PC\Pictures\bicicletas de montaña\bici2.jpg">
+        <h3>Turbo Racing</h3>
+        <p>Aro: 26" | 24 velocidades</p>
+        <p class="precio">S/ 1,550.00 </p>
+        <a href="file:///C:\Users\PC\Pictures\bicicletas de montaña/bici 2.html" class="boton" href="#">Comprar</a>
+    </div>
+
+
+    <!---- BICI 3 ----->
+    <div class="producto">
+        <div class="descuento">-10%</div>
+
+        <img src="C:\Users\PC\Pictures\bicicletas de montaña\bici3.jpg">
+        <h3>Sunpeed Deore Rock</h3>
+        <p>Aro: 29" | 21 velocidades</p>
+        <p class="precio">S/ 4,490.00 </p>
+        <a class="boton" href="#">Comprar</a>
+    </div>
+
+
+    <!---- BICI 4 ----->
+    <div class="producto">
+        <div class="descuento">-40%</div>
+
+        <img src="C:\Users\PC\Pictures\bicicletas de montaña\bici4.jpg">
+        <h3>Montañera Cross</h3>
+        <p>Aro: 29" | 27 velocidades</p>
+        <p class="precio">S/ 1,250.00 </p>
+        <a class="boton" href="#">Comprar</a>
+    </div>
+
+
+    <!----- BICI 5 ----->
+    <div class="producto">
+        <div class="descuento">-10%</div>
+
+        <img src="C:\Users\PC\Pictures\bicicletas de montaña\bici5.jpg">
+        <h3>Montañera Trail</h3>
+        <p>Aro: 27.5" | 21 velocidades</p>
+        <p class="precio">S/ 1,590.00 </p>
+        <a class="boton" href="#">Comprar</a>
+    </div>
+
+
+    <!---- BICI 6 ----->
+    <div class="producto">
+        <div class="descuento">-30%</div>
+
+        <img src="C:\Users\PC\Pictures\bicicletas de montaña\bici6.jpg">
+        <h3>Montañera JAFI</h3>
+        <p>Aro: 29" | 21 velocidades</p>
+        <p class="precio">S/ 1,620.00 </p>
+        <a class="boton" href="#">Comprar</a>
+    </div>
+
+
+
+    <!---- BICI 7 ------>
+    <div class="producto">
+        <div class="descuento">-12%</div>
+
+        <img src="C:\Users\PC\Pictures\bicicletas de montaña\bici7.jpg">
+        <h3>Montañera Hidráulica</h3>
+        <p>Aro: 29" | 24 velocidades</p>
+        <p class="precio">S/ 1,600.00 </p>
+        <a class="boton" href="#">Comprar</a>
+    </div>
+
+
+
+    <!--- BICI 8 ------>
+    <div class="producto">
+        <div class="descuento">-15%</div>
+
+        <img src="C:\Users\PC\Pictures\bicicletas de montaña\bici8.jpg">
+        <h3>Montañera Elite</h3>
+        <p>Aro: 29" | 21 velocidades</p>
+        <p class="precio">S/ 1,190.00 </p>
+        <a class="boton" href="#">Comprar</a>
+    </div>
+
+
+
+    <!---- BICI 9 ----->
+    <div class="producto">
+        <div class="descuento">-28%</div>
+
+        <img src="C:\Users\PC\Pictures\bicicletas de montaña\bici9.jpg">
+        <h3>Montañera Fit</h3>
+        <p>Aro: 27.5" | 24 velocidades</p>
+        <p class="precio">S/ 1,120.00 </p>
+        <a class="boton" href="#">Comprar</a>
+    </div>
+
+
+
+    <!---- BICI 10 ----->
+    <div class="producto">
+        <div class="descuento">-32%</div>
+
+        <img src="C:\Users\PC\Pictures\bicicletas de montaña\bici10.jpg">
+        <h3>Montañera Force</h3>
+        <p>Aro: 29" | 21 velocidades</p>
+        <p class="precio">S/ 1,190.00 </p>
+        <a class="boton" href="#">Comprar</a>
+    </div>
+
+
+
+    <!----- BICI 11 ----->
+    <div class="producto">
+        <div class="descuento">-26%</div>
+
+        <img src="C:\Users\PC\Pictures\bicicletas de montaña\bici11.jpg">
+        <h3>Montañera Vertex</h3>
+        <p>Aro: 27.5" | 21 velocidades</p>
+        <p class="precio">S/ 1,090.00 </p>
+        <a class="boton" href="#">Comprar</a>
+    </div>
+
+
+
+    <!----- BICI 12 ----->
+    <div class="producto">
+        <div class="descuento">-28%</div>
+
+        <img src="C:\Users\PC\Pictures\bicicletas de montaña\bici12.jpg">
+        <h3>Montañera Ranger</h3>
+        <p>Aro: 29" | 24 velocidades</p>
+        <p class="precio">S/ 1,250.00 </p>
+        <a class="boton" href="#">Comprar</a>
+    </div>
+
+
+    <!----- BICI 13 ----->
+    <div class="producto">
+        <div class="descuento">-15%</div>
+
+        <img src="C:\Users\PC\Pictures\bicicletas de montaña\bici13.jpg">
+        <h3>Montañera Speed</h3>
+        <p>Aro: 29" | 21 velocidades</p>
+        <p class="precio">S/ 1,090.00 </p>
+        <a class="boton" href="#">Comprar</a>
+    </div>
+
+
+
+    <!---- BICI 14 ----->
+    <div class="producto">
+        <div class="descuento">-34%</div>
+
+        <img src="C:\Users\PC\Pictures\bicicletas de montaña\bici14.jpg">
+        <h3>Montañera Lady</h3>
+        <p>Aro: 26" | 21 velocidades</p>
+        <p class="precio">S/ 1,980.00 </p>
+        <a class="boton" href="#">Comprar</a>
+    </div>
+
+
+
+    <!--- BICI 15 ----->
+    <div class="producto">
+        <div class="descuento">-22%</div>
+
+        <img src="C:\Users\PC\Pictures\bicicletas de montaña\bici15.jpg">
+        <h3>Montañera K2</h3>
+        <p>Aro: 29" | 24 velocidades</p>
+        <p class="precio">S/ 1,350.00 </p>
+        <a class="boton" href="#">Comprar</a>
+    </div>
+
+
+
+    <!---- BICI 16 ----->
+    <div class="producto">
+        <div class="descuento">-16%</div>
+
+        <img src="C:\Users\PC\Pictures\bicicletas de montaña\bici16.jpg">
+        <h3>Montañera Extreme</h3>
+        <p>Aro: 27.5" | 21 velocidades</p>
+        <p class="precio">S/ 1,190.00 </p>
+        <a class="boton" href="#">Comprar</a>
+    </div>
+
+
+
+
+    <!---- BICI 17 ----->
+    <div class="producto">
+        <div class="descuento">-24%</div>
+
+        <img src="C:\Users\PC\Pictures\bicicletas de montaña\bici17.jpg">
+        <h3>Montañera Pro</h3>
+        <p>Aro: 29" | 27 velocidades</p>
+        <p class="precio">S/ 1,330.00 </p>
+        <a class="boton" href="#">Comprar</a>
+    </div>
+
+
+
+
+    <!----- BICI 18 ----->
+    <div class="producto">
+        <div class="descuento">-20%</div>
+
+        <img src="C:\Users\PC\Pictures\bicicletas de montaña\bici18.jpg">
+        <h3>Montañera Nitro</h3>
+        <p>Aro: 29" | 24 velocidades</p>
+        <p class="precio">S/ 1,200.00 </p>
+        <a class="boton" href="#">Comprar</a>
+    </div>
+
+
+
+
+    <!---- BICI 19 ----->
+    <div class="producto">
+        <div class="descuento">-30%</div>
+
+        <img src="C:\Users\PC\Pictures\bicicletas de montaña\bici19.jpg">
+        <h3>Montañera Summit</h3>
+        <p>Aro: 27.5" | 21 velocidades</p>
+        <p class="precio">S/ 1,060.00 </p>
+        <a class="boton" href="#">Comprar</a>
+    </div>
+
+
+
+
+    <!---- BICI 20 ----->
+    <div class="producto">
+        <div class="descuento">-22%</div>
+
+        <img src="C:\Users\PC\Pictures\bicicletas de montaña\bici20.jpg">
+        <h3>Montañera Falcon</h3>
+        <p>Aro: 29" | 26 velocidades</p>
+        <p class="precio">S/ 1,210.00 </p>
+        <a class="boton" href="#">Comprar</a>
+    </div>
+</div>
+
+<footer>
+	<p>🚵 MOUNTAIN BIKE - Catálogo de Bicicletas © 2026</p>
+</footer>
+</body>
+</html>
+

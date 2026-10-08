@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Comprar</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+
+        .carrito {
+            width: 90%;
+            margin: 30px auto;
+            background-color: #f7f9fa;
+            border: 1px solid #d9dfe3;
+            border-radius: 12px;
+            padding: 25px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #073b63;
+            border-bottom: 2px solid #073b63;
+            padding-bottom: 12px;
+        }
+
+        .producto {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .controles {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button {
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .menos,
+        .mas {
+            background-color: #e1e5e8;
+            color: #073b63;
+        }
+
+        .eliminar {
+            background-color: #e63946;
+            color: white;
+        }
+
+        .total {
+            text-align: right;
+            font-size: 20px;
+            font-weight: bold;
+            color: #073b63;
+            margin-top: 20px;
+        }
+
+        .agregar {
+            display: block;
+            width: 180px;
+            margin: 20px 0 0 auto;
+            background-color: #073b63;
+            color: white;
+        }
+
+        .volver {
+            display: inline-block;
+            margin-top: 20px;
+            color: #073b63;
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="carrito">
+
+        <h1>Carrito de Compras</h1>
+
+        <div id="productos"></div>
+
+        <div class="total">
+            Total: S/ <span id="total">0.00</span>
+        </div>
+
+        <button class="agregar" onclick="agregarProducto()">
+            Agregar
+        </button>
+
+        <a href="index.html" class="volver">
+            ← Volver al catálogo
+        </a>
+
+    </div>
+
+
+    <script>
+
+        let producto = localStorage.getItem("producto");
+        let precio = Number(localStorage.getItem("precio"));
+        let cantidad = Number(localStorage.getItem("cantidad"));
+
+
+        function mostrarProducto() {
+
+            if (!producto || cantidad <= 0) {
+
+                document.getElementById("productos").innerHTML =
+                    "<p>No hay productos agregados.</p>";
+
+                document.getElementById("total").textContent = "0.00";
+
+                return;
+            }
+
+
+            document.getElementById("productos").innerHTML = `
+
+                <div class="producto">
+
+                    <strong>
+                        ${producto}
+                    </strong>
+
+                    <span>
+                        S/ ${precio.toFixed(2)} c/u
+                    </span>
+
+                    <div class="controles">
+
+                        <button class="menos" onclick="disminuir()">
+                            -
+                        </button>
+
+                        <span>
+                            ${cantidad}
+                        </span>
+
+                        <button class="mas" onclick="aumentar()">
+                            +
+                        </button>
+
+                        <button class="eliminar" onclick="eliminar()">
+                            Eliminar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            document.getElementById("total").textContent =
+                (precio * cantidad).toFixed(2);
+
+        }
+
+
+        function aumentar() {
+
+            cantidad++;
+
+            localStorage.setItem("cantidad", cantidad);
+
+            mostrarProducto();
+
+        }
+
+
+        function disminuir() {
+
+            if (cantidad > 1) {
+
+                cantidad--;
+
+                localStorage.setItem("cantidad", cantidad);
+
+                mostrarProducto();
+
+            } else {
+
+                eliminar();
+
+            }
+
+        }
+
+
+        function eliminar() {
+
+            localStorage.removeItem("producto");
+            localStorage.removeItem("precio");
+            localStorage.removeItem("cantidad");
+
+            producto = null;
+            precio = 0;
+            cantidad = 0;
+
+            mostrarProducto();
+
+        }
+
+
+        function agregarProducto() {
+
+            window.location.href = "file:///C:/Users/PC/Pictures/bicicletas de montaña/bici 1.html";
+
+        }
+
+
+        mostrarProducto();
+
+    </script>
+
+</body>
+
+</html>
